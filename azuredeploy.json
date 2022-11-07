@@ -274,7 +274,7 @@
     {
       "type": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers",
       "apiVersion": "2022-05-15",
-      "name": "[format('{0}/{1}/{2}', toLower(variables('cosmosAccountName')), variables('cosmosEnterpriseDB'), variables('containerBySingleTenant'))]",
+      "name": "[format('{0}/{1}/{2}', toLower(variables('cosmosAccountName')), variables('cosmosEnterpriseDB'), variables('containerReservationsByBizLoc'))]",
       "properties": {
         "resource": {
           "id": "[variables('containerReservationsByBizLoc')]",
