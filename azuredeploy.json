@@ -44,7 +44,10 @@
           {
             "locationName": "[resourceGroup().location]"
           }
-        ]
+        ],
+        "capacity": {
+          "totalThroughputLimit":11000
+        }
       }
     },
     {
