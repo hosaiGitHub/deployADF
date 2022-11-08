@@ -16,7 +16,14 @@
       },
       "allowedValues": [
         "East US",
-        "East US 2"
+        "East US 2",
+        "Central US",
+        "North Central US",
+        "South Central US", 
+        "West US",
+        "West US 2",
+        "West US 3",
+        "West Central US"
       ]
     }
   },
