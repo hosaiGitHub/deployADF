@@ -11,6 +11,7 @@
   "parameters": {
     "cosmosDbLocation": {
       "type": "string",
+      "defaultValue": "",
       "metadata": {
         "description": "Location for the Cosmos DB account."
       },
