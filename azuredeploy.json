@@ -11,6 +11,7 @@
   "parameters": {
     "cosmosDbLocation": {
       "type": "string",
+      "defaultValue": "",
       "metadata": {
         "description": "Location for the Cosmos DB account."
       },
@@ -77,7 +78,9 @@
           "id": "[variables('cosmosSaaSDatabase')]"
         },
         "options": {
-          "throughput": 1000
+          "autoscaleSettings": {
+            "maxThroughput": 6000
+          }
         }
       },
       "dependsOn": [
@@ -253,7 +256,9 @@
           "id": "[variables('cosmosEnterpriseDB')]"
         },
         "options": {
-          "throughput": 1000
+          "autoscaleSettings": {
+            "maxThroughput": 1000
+          }
         }
       },
       "dependsOn": [
