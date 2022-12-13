@@ -198,7 +198,7 @@
       ],
       "properties": {
           "resource": {
-              "throughput": 100,
+              "throughput": 400,
               "autoscaleSettings": {
                   "maxThroughput": 1000
               }
