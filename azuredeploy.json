@@ -70,7 +70,7 @@
         },
         "options": {
           "autoscaleSettings": {
-            "maxThroughput": 1000
+            "maxThroughput": 4000
           }
         }
       },
@@ -181,29 +181,16 @@
               }
             ]
           }
+        },
+        "options": {
+          "autoscaleSettings": {
+            "maxThroughput": 1000
+          }
         }
       },
       "dependsOn": [
         "[resourceId('Microsoft.DocumentDB/databaseAccounts/sqlDatabases', toLower(variables('cosmosAccountName')), variables('cosmosDatabase2Name'))]"
       ]
-    },
-    {
-      "type": "Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers/throughputSettings",
-      "apiVersion": "2022-08-15",
-      "name": "[format('{0}/{1}/{2}/{3}', toLower(variables('cosmosAccountName')), variables('cosmosDatabase2Name'), variables('cosmosDB2Container1Name'), 'default')]",
-      "dependsOn": [
-          "[resourceId('Microsoft.DocumentDB/databaseAccounts/sqlDatabases/containers', toLower(variables('cosmosAccountName')), variables('cosmosDatabase2Name'), variables('cosmosDB2Container1Name'))]",
-          "[resourceId('Microsoft.DocumentDB/databaseAccounts/sqlDatabases', toLower(variables('cosmosAccountName')), variables('cosmosDatabase2Name'))]",
-          "[resourceId('Microsoft.DocumentDB/databaseAccounts', variables('cosmosAccountName'))]"
-      ],
-      "properties": {
-          "resource": {
-              "throughput": 400,
-              "autoscaleSettings": {
-                  "maxThroughput": 1000
-              }
-          }
-      }
     }
   ]
 }
